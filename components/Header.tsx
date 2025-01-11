@@ -4,6 +4,9 @@ import Link from "next/link";
 import { PropsWithChildren, useState } from "react";
 import { SunIcon } from "./icons/SunIcon";
 import { MoonIcon } from "./icons/MoonIcon";
+import { LinkedinIcon } from "./icons/LinkedinIcon";
+import { GithubIcon } from "./icons/GithubIcon";
+import { MailIcon } from "./icons/MailIcon";
 
 const DesktopNavItem = (props: PropsWithChildren<{ href: string }>) => (
   <li>
@@ -35,10 +38,29 @@ const Avatar = () => (
 );
 
 const Socials = () => (
-  <div>
-    Socials here
+  <div className="flex gap-4">
+    <Link
+      className="size-5 text-zinc-500 transition hover:text-[#0A66C2]"
+      href="https://www.linkedin.com/in/wassim-ben-amor/"
+      target="_blank"
+    >
+      <LinkedinIcon />
+    </Link>
+    <Link
+      className="size-5 text-zinc-500 transition hover:text-zinc-900 dark:hover:text-[#fafafa]"
+      href="https://github.com/wassim-ben-amor"
+      target="_blank"
+    >
+      <GithubIcon />
+    </Link>
+    <Link
+      className="size-5 text-zinc-500 transition hover:text-blue-500 dark:hover:text-[#fafafa]"
+      href="mailto:wassim.benamor1@gmail.com"
+    >
+      <MailIcon />
+    </Link>
   </div>
-)
+);
 
 const DarkModeToggle = () => {
   const toggleMode = () => {
@@ -69,8 +91,6 @@ const DarkModeToggle = () => {
 };
 
 export const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
     <header className="relative z-50 h-16 pt-6 flex justify-between">
       <Avatar />

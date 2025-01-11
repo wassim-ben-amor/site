@@ -1,12 +1,8 @@
 import { ComponentPropsWithoutRef } from "react";
 
-export const LinkedinIcon = (
-  props: ComponentPropsWithoutRef<"svg"> & { size: number }
-) => {
+export const LinkedinIcon = (props: ComponentPropsWithoutRef<"svg">) => {
   return (
     <svg
-      width={props.size}
-      height={props.size}
       viewBox="0 0 256 256"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
