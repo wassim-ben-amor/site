@@ -22,6 +22,22 @@ import { AskhubLogo } from "@/components/icons/AskhubLogo";
 import { VyndLogo } from "@/components/icons/VyndLogo";
 import { DocumentIcon } from "@/components/icons/DocumentIcon";
 import Image from "next/image";
+import { SkillIcon } from "@/components/icons/SkillIcon";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { JavascriptIcon } from "@/components/icons/JavascriptIcon";
+import { NextIcon } from "@/components/icons/NextIcon";
+import { NestIcon } from "@/components/icons/NestIcon";
+import { AngularIcon } from "@/components/icons/AngularIcon";
+import { PostgresqlIcon } from "@/components/icons/PostgresqlIcon";
+import { GithubActionsIcon } from "@/components/icons/GithubActionsIcon";
+import { AWSIcon } from "@/components/icons/AWSIcon";
+import { ReduxIcon } from "@/components/icons/ReduxIcon";
+import { TurborepoIcon } from "@/components/icons/TurborepoIcon";
 
 const ReferenceLink = (
   props: PropsWithChildren<{ href: string; className?: string }>
@@ -57,22 +73,22 @@ const ProfileHeroSection = () => (
         development, with a strong specialization in frontend. My expertise lies
         in building efficient and scalable solutions using
         <ReferenceLink href="https://www.typescriptlang.org/">
-          <TypescriptIcon className="size-4" />
+          <TypescriptIcon className="size-4 text-[#3178C6]" />
           TypeScript
         </ReferenceLink>
         and
         <ReferenceLink href="https://nodejs.org/">
-          <NodeIcon className="size-4" />
+          <NodeIcon className="size-4 text-[#539E43]" />
           Node.js
         </ReferenceLink>
         , with a focus on
         <ReferenceLink href="https://reactjs.org/">
-          <ReactIcon className="size-4" />
+          <ReactIcon className="size-4 text-[#00D8FF]" />
           React
         </ReferenceLink>
         .
       </p>
-      <div className="mt-4 text-lg flex gap-4">
+      <div className="mt-8 text-lg flex gap-4">
         <Link className={buttonVariants({ variant: "outline" })} href="#">
           <DownloadIcon className="text-blue-500" />
           Download my resume
@@ -119,97 +135,160 @@ const WorkExperienceItem = (
   </li>
 );
 
-const WorkPostsSection = () => (
-  <div className="flex text-sm gap-4">
-    <Card className="w-full md:w-1/2 shadow-sm">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-zinc-600 dark:text-zinc-300">
-          <WorkIcon className="size-5 text-zinc-400 dark:text-zinc-400" />
-          <span>Work Experiences</span>
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <ol className="flex flex-col gap-4">
-          <WorkExperienceItem
-            title="Senior Software Engineer"
-            description="Contentsquare"
-            date="Mar. 2020 — Present"
-          >
-            <ContentsquareLogo className="text-white h-full w-full rounded-full" />
-          </WorkExperienceItem>
-          <WorkExperienceItem
-            title="Software Engineer"
-            description="Askhub"
-            date="Feb. 2018 — Feb. 2020"
-          >
-            <AskhubLogo className="h-full w-full" />
-          </WorkExperienceItem>
-          <WorkExperienceItem
-            title="Frontend Developer"
-            description="Vynd"
-            date="Mar. 2016 — Jan. 2018"
-          >
-            <VyndLogo className="p-0.5 h-full w-full" />
-          </WorkExperienceItem>
-        </ol>
-      </CardContent>
-      <CardFooter className="flex flex-col gap-2">
-        <Link
-          className={cn(buttonVariants({ variant: "secondary" }), "w-full")}
-          href="/work"
+const SkillItem = (props: PropsWithChildren<{ title: string }>) => (
+  <TooltipProvider delayDuration={200}>
+    <Tooltip>
+      <TooltipTrigger>{props.children}</TooltipTrigger>
+      <TooltipContent side="bottom">
+        <p>{props.title}</p>
+      </TooltipContent>
+    </Tooltip>
+  </TooltipProvider>
+);
+
+const WorkSection = () => (
+  <Card className="w-full md:w-1/2 shadow-sm">
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2 text-zinc-600 dark:text-zinc-300">
+        <WorkIcon className="size-5 text-zinc-400 dark:text-zinc-400" />
+        <span>Work Experiences</span>
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <ol className="flex flex-col gap-4">
+        <WorkExperienceItem
+          title="Senior Software Engineer"
+          description="Contentsquare"
+          date="Mar. 2020 — Present"
         >
-          See more ...
-        </Link>
-        <Link
-          className={cn(buttonVariants({ variant: "secondary" }), "w-full")}
-          href="mailto:wassim.benamor1@gmail.com"
+          <ContentsquareLogo className="text-white h-full w-full rounded-full" />
+        </WorkExperienceItem>
+        <WorkExperienceItem
+          title="Software Engineer"
+          description="Askhub"
+          date="Feb. 2018 — Feb. 2020"
         >
-          Do you have a mission?
-        </Link>
-      </CardFooter>
-    </Card>
-    <div className="flex flex-col w-full md:w-1/2 ">
-      <Card className="shadow-sm">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-zinc-600 dark:text-zinc-300">
-            <DocumentIcon className="size-5 text-zinc-400 dark:text-zinc-300" />
-            <span>Posts</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ul>
-            <li className="flex gap-4">
-              <Link
-                href="https://engineering.contentsquare.com/2021/serverside-webpage-screenshot/"
-                target="_blank"
-                className="flex flex-1 gap-2"
-              >
-                <Image
-                  src="/page-screenshot-article.jpg"
-                  alt="Article screenshot"
-                  className="rounded-md object-cover h-14"
-                  width={80}
-                  height={48}
-                />
-                <div className="flex flex-col gap-0.5 leading-tight">
-                  <span className="font-medium">
-                    Full page screenshots on the server side
-                  </span>
-                  <span className="font- text-zinc-400">
-                    Showcasing the technical solution behind efficient
-                    server-side full-page screenshot capture.
-                  </span>
-                  <span className="font-light text-xs text-zinc-600 dark:text-zinc-400">
-                    Sep 20, 2021
-                  </span>
-                </div>
-              </Link>
-            </li>
-          </ul>
-        </CardContent>
-      </Card>
-    </div>
-  </div>
+          <AskhubLogo className="h-full w-full" />
+        </WorkExperienceItem>
+        <WorkExperienceItem
+          title="Frontend Developer"
+          description="Vynd"
+          date="Mar. 2016 — Jan. 2018"
+        >
+          <VyndLogo className="p-0.5 h-full w-full" />
+        </WorkExperienceItem>
+      </ol>
+    </CardContent>
+    <CardFooter className="flex flex-col gap-2">
+      <Link
+        className={cn(buttonVariants({ variant: "secondary" }), "w-full")}
+        href="/work"
+      >
+        See more ...
+      </Link>
+      <Link
+        className={cn(buttonVariants({ variant: "secondary" }), "w-full")}
+        href="mailto:wassim.benamor1@gmail.com"
+      >
+        Do you have a mission?
+      </Link>
+    </CardFooter>
+  </Card>
+);
+
+const SkillsSection = () => (
+  <Card className="shadow-sm flex-1">
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2 text-zinc-600 dark:text-zinc-300">
+        <SkillIcon className="size-5 text-zinc-400 dark:text-zinc-300" />
+        <span>Skills</span>
+      </CardTitle>
+    </CardHeader>
+    <CardContent className="flex gap-6 flex-wrap">
+      <SkillItem title="Javascript">
+        <JavascriptIcon className="size-6 rounded-md text-zinc-200 hover:text-[#F7DF1E] transition-transform hover:scale-125" />
+      </SkillItem>
+      <SkillItem title="Typescript">
+        <TypescriptIcon className="size-6 rounded-md text-zinc-300 hover:text-[#3178C6] transition-transform hover:scale-125" />
+      </SkillItem>
+      <SkillItem title="Node.js">
+        <NodeIcon className="size-6 rounded-md text-zinc-400 hover:text-[#539E43] transition-transform hover:scale-125" />
+      </SkillItem>
+      <SkillItem title="Nest.js">
+        <NestIcon className="size-6 rounded-md text-zinc-300 hover:text-[#E0234E] transition-transform hover:scale-125" />
+      </SkillItem>
+      <SkillItem title="React">
+        <ReactIcon className="size-6 text-zinc-400 hover:text-[#00D8FF] transition-transform hover:scale-125" />
+      </SkillItem>
+      <SkillItem title="Redux">
+        <ReduxIcon className="size-6 text-zinc-400 hover:text-[#764ABC] transition-transform hover:scale-125" />
+      </SkillItem>
+      <SkillItem title="Next.js">
+        <NextIcon className="size-6 text-zinc-400 hover:text-black transition-transform hover:scale-125" />
+      </SkillItem>
+      <SkillItem title="Angular">
+        <div className="group">
+          <AngularIcon className="size-6 text-zinc-400 transition-transform hover:scale-125" />
+        </div>
+      </SkillItem>
+      <SkillItem title="PostgreSQL">
+        <PostgresqlIcon className="size-6 text-zinc-400 hover:text-[#336791] transition-transform hover:scale-125" />
+      </SkillItem>
+      <SkillItem title="Github Actions">
+        <GithubActionsIcon className="size-6 text-zinc-400 hover:text-[#4A7EBF] transition-transform hover:scale-125" />
+      </SkillItem>
+      <SkillItem title="Turborepo">
+        <div className="group">
+          <TurborepoIcon className="size-6 text-zinc-400 transition-transform hover:scale-125" />
+        </div>
+      </SkillItem>
+      <SkillItem title="Amzon Web Services">
+        <AWSIcon className="size-6 text-zinc-400 transition-transform hover:scale-125 hover:text-[#FF9900]" />
+      </SkillItem>
+    </CardContent>
+  </Card>
+);
+
+const PostsSection = () => (
+  <Card className="shadow-sm">
+    <CardHeader>
+      <CardTitle className="flex items-center gap-2 text-zinc-600 dark:text-zinc-300">
+        <DocumentIcon className="size-5 text-zinc-400 dark:text-zinc-300" />
+        <span>Posts</span>
+      </CardTitle>
+    </CardHeader>
+    <CardContent>
+      <ul>
+        <li className="flex gap-4">
+          <Link
+            href="https://engineering.contentsquare.com/2021/serverside-webpage-screenshot/"
+            target="_blank"
+            className="flex flex-1 gap-2"
+          >
+            <Image
+              src="/page-screenshot-article.jpg"
+              alt="Article screenshot"
+              className="rounded-md object-cover h-14"
+              width={80}
+              height={48}
+            />
+            <div className="flex flex-col gap-0.5 leading-normal">
+              <span className="font-medium">
+                Full page screenshots on the server side
+              </span>
+              <span className="font- text-zinc-400">
+                Showcasing the technical solution behind efficient server-side
+                full-page screenshot capture.
+              </span>
+              <span className="font-light text-xs text-zinc-600 dark:text-zinc-400">
+                Sep 20, 2021
+              </span>
+            </div>
+          </Link>
+        </li>
+      </ul>
+    </CardContent>
+  </Card>
 );
 
 export default function Home() {
@@ -218,7 +297,13 @@ export default function Home() {
       <div className="flex flex-col">
         <ProfileHeroSection />
         <Separator className="my-12 h-full" />
-        <WorkPostsSection />
+        <div className="flex text-sm gap-4">
+          <WorkSection />
+          <div className="flex flex-col w-full md:w-1/2 gap-2">
+            <SkillsSection />
+            <PostsSection />
+          </div>
+        </div>
       </div>
     </main>
   );

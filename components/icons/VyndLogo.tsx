@@ -3,8 +3,6 @@ import { ComponentPropsWithoutRef } from "react";
 export const VyndLogo = (props: ComponentPropsWithoutRef<"svg">) => {
   return (
     <svg
-      width="328"
-      height="106"
       viewBox="0 0 328 106"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
