@@ -1,7 +1,12 @@
-export const ClickArrowIcon = () => {
+import { cn } from "@/lib/utils";
+
+export const ClickArrowIcon = (props: { className?: string }) => {
   return (
     <span
-      className="pointer-events-none absolute bottom-4 right-4 rounded-full bg-zinc-900 p-2 text-zinc-300"
+      className={cn(
+        "pointer-events-none absolute bottom-4 right-4 rounded-full bg-zinc-900 p-2 text-zinc-300",
+        props.className
+      )}
       aria-hidden="true"
     >
       <svg
