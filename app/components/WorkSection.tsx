@@ -20,17 +20,17 @@ const WorkExperienceItem = (
 ) => (
   <li className="flex justify-between">
     <div className="flex flex-1 gap-3">
-      <span className="rounded-full flex items-center justify-center h-10 w-10 p-0.5 shadow-xl shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10">
+      <span className="rounded-full flex items-center justify-center h-10 w-10 p-0.5 shadow-custom">
         {props.children}
       </span>
       <div className="flex flex-col gap-0.5">
-        <span className="font-medium">{props.title}</span>
-        <span className="font-light text-xs text-zinc-600 dark:text-zinc-600">
+        <span className="font-medium text-primary/80">{props.title}</span>
+        <span className="font-light text-xs text-primary/80">
           {props.description}
         </span>
       </div>
     </div>
-    <span className="font-light text-xs text-zinc-400 dark:text-zinc-400">
+    <span className="font-light text-xs text-primary/75">
       {props.date}
     </span>
   </li>
@@ -39,8 +39,8 @@ const WorkExperienceItem = (
 export const WorkSection = () => (
   <Card className="w-full lg:w-[55%] shadow-sm">
     <CardHeader>
-      <CardTitle className="flex items-center gap-2 text-zinc-600 dark:text-zinc-300">
-        <WorkIcon className="size-5 text-zinc-400 dark:text-zinc-400" />
+      <CardTitle className="flex items-center gap-2 text-primary/80">
+        <WorkIcon className="size-5 text-blue-500" />
         <span>Work Experiences</span>
       </CardTitle>
     </CardHeader>
@@ -58,14 +58,14 @@ export const WorkSection = () => (
           description="Askhub"
           date="Feb. 2018 — Feb. 2020"
         >
-          <AskhubLogo className="h-full w-full" />
+          <AskhubLogo className="h-full w-full dark:bg-white rounded-full" />
         </WorkExperienceItem>
         <WorkExperienceItem
           title="Frontend Developer"
           description="Vynd"
           date="Mar. 2016 — Jan. 2018"
         >
-          <VyndLogo className="p-0.5 h-full w-full" />
+          <VyndLogo className="p-0.5 h-full w-full dark:bg-white rounded-full" />
         </WorkExperienceItem>
       </ol>
     </CardContent>

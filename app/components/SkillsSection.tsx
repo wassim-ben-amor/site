@@ -35,23 +35,23 @@ const SkillItem = (props: PropsWithChildren<{ title: string }>) => (
 export const SkillsSection = () => (
   <Card className="shadow-sm flex-1">
     <CardHeader>
-      <CardTitle className="flex items-center gap-2 text-zinc-600 dark:text-zinc-300">
-        <SkillIcon className="size-5 text-zinc-400 dark:text-zinc-300" />
+      <CardTitle className="flex items-center gap-2 text-primary/80">
+        <SkillIcon className="size-5 text-blue-500" />
         <span>Skills</span>
       </CardTitle>
     </CardHeader>
     <CardContent className="flex gap-6 flex-wrap">
       <SkillItem title="Javascript">
-        <JavascriptIcon className="size-6 rounded-md text-zinc-200 hover:text-[#F7DF1E] transition-transform hover:scale-125" />
+        <JavascriptIcon className="size-6 rounded-[4px] text-zinc-200 dark:text-zinc-400 hover:text-[#F7DF1E] transition-transform hover:scale-125" />
       </SkillItem>
       <SkillItem title="Typescript">
-        <TypescriptIcon className="size-6 rounded-md text-zinc-300 hover:text-[#3178C6] transition-transform hover:scale-125" />
+        <TypescriptIcon className="size-6 rounded-[4px] text-zinc-300 dark:text-zinc-500 hover:text-[#3178C6] transition-transform hover:scale-125" />
       </SkillItem>
       <SkillItem title="Node.js">
-        <NodeIcon className="size-6 rounded-md text-zinc-400 hover:text-[#539E43] transition-transform hover:scale-125" />
+        <NodeIcon className="size-6 text-zinc-400 hover:text-[#539E43] transition-transform hover:scale-125" />
       </SkillItem>
       <SkillItem title="Nest.js">
-        <NestIcon className="size-6 rounded-md text-zinc-300 hover:text-[#E0234E] transition-transform hover:scale-125" />
+        <NestIcon className="size-6 text-zinc-400 hover:text-[#E0234E] transition-transform hover:scale-125" />
       </SkillItem>
       <SkillItem title="React">
         <ReactIcon className="size-6 text-zinc-400 hover:text-[#00D8FF] transition-transform hover:scale-125" />
@@ -68,7 +68,7 @@ export const SkillsSection = () => (
         </div>
       </SkillItem>
       <SkillItem title="PostgreSQL">
-        <PostgresqlIcon className="size-6 text-zinc-400 hover:text-[#336791] transition-transform hover:scale-125" />
+        <PostgresqlIcon className="size-6 text-zinc-300 dark:text-zinc-500 hover:text-[#336791] transition-transform hover:scale-125" />
       </SkillItem>
       <SkillItem title="Github Actions">
         <GithubActionsIcon className="size-6 text-zinc-400 hover:text-[#4A7EBF] transition-transform hover:scale-125" />

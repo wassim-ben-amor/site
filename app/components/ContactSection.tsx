@@ -30,28 +30,28 @@ const ContactItem = (
         </div>
         <div>
           <h3 className="text-sm font-semibold">{props.name}</h3>
-          <p className="text-zinc-500 text-sm">{props.description}</p>
+          <p className="text-primary/75 text-sm">{props.description}</p>
         </div>
       </div>
-      <ClickArrowIcon className="bg-zinc-400 dark:bg-zinc-600 text-white" />
+      <ClickArrowIcon className="bg-blue-500 text-white" />
     </Card>
   </Link>
 );
 
 export const ContactSection = () => (
-  <div className="flex flex-col gap-2">
+  <div className="flex flex-col">
     <h1 className="text-xl font-semibold">Contact me</h1>
-    <h2 className="text-zinc-500">
-      Find me on my social networks or send me an email.
+    <h2 className="text-primary/75">
+      Find me on my social networks or contact me via email.
     </h2>
-    <div className="flex gap-4 flex-wrap">
+    <div className="flex mt-4 gap-4 flex-wrap">
       <ContactItem
         image="/profile.jpg"
         name="wassim-ben-amor"
         description="My Github profile"
         href="https://github.com/wassim-ben-amor"
       >
-        <GithubIcon />
+        <GithubIcon className="dark:text-black" />
       </ContactItem>
       <ContactItem
         image="/profile.jpg"
@@ -67,7 +67,7 @@ export const ContactSection = () => (
         description="Send me an email"
         href="mailto:wassim.benamor1@gmail.com"
       >
-        <MailIcon />
+        <MailIcon className="dark:text-blue-500" />
       </ContactItem>
     </div>
   </div>

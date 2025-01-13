@@ -4,7 +4,7 @@ export const ClickArrowIcon = (props: { className?: string }) => {
   return (
     <span
       className={cn(
-        "pointer-events-none absolute bottom-4 right-4 rounded-full bg-zinc-900 p-2 text-zinc-300",
+        "pointer-events-none absolute bottom-4 right-4 rounded-full bg-zinc-900 p-2 text-zinc-200",
         props.className
       )}
       aria-hidden="true"

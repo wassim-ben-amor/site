@@ -19,14 +19,14 @@ const DesktopNavItem = (props: PropsWithChildren<{ href: string }>) => (
   </li>
 );
 const DesktopNav = () => (
-  <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+  <ul className="flex items-center rounded-full px-4 text-sm font-medium shadow-custom">
     <DesktopNavItem href="/">Home</DesktopNavItem>
     <DesktopNavItem href="/work">Work</DesktopNavItem>
   </ul>
 );
 
 const Avatar = () => (
-  <div className="size-11 rounded-full bg-white/90 p-0.5 shadow-xl shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10">
+  <div className="size-11 rounded-full p-0.5 shadow-custom hidden sm:block">
     <Link href="/" aria-label="Home">
       <img
         className="size-10 rounded-full object-cover"
@@ -40,21 +40,21 @@ const Avatar = () => (
 const Socials = () => (
   <div className="flex gap-4">
     <Link
-      className="size-5 text-zinc-500 transition hover:text-[#0A66C2]"
+      className="size-5 text-primary/60 transition hover:text-[#0A66C2]"
       href="https://www.linkedin.com/in/wassim-ben-amor/"
       target="_blank"
     >
       <LinkedinIcon />
     </Link>
     <Link
-      className="size-5 text-zinc-500 transition hover:text-zinc-900 dark:hover:text-[#fafafa]"
+      className="size-5 text-primary/60 transition hover:text-black dark:hover:text-[#fafafa]"
       href="https://github.com/wassim-ben-amor"
       target="_blank"
     >
       <GithubIcon />
     </Link>
     <Link
-      className="size-5 text-zinc-500 transition hover:text-blue-500 dark:hover:text-[#fafafa]"
+      className="size-5 text-primary/60 transition hover:text-blue-500 dark:hover:text-[#fafafa]"
       href="mailto:wassim.benamor1@gmail.com"
     >
       <MailIcon />
@@ -81,11 +81,11 @@ const DarkModeToggle = () => {
     <button
       type="button"
       aria-label="Toggle dark mode"
-      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      className="group rounded-full px-3 py-2 shadow-custom"
       onClick={toggleMode}
     >
-      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-blue-50 [@media(prefers-color-scheme:dark)]:stroke-blue-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-blue-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-blue-600" />
-      <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-blue-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-blue-500" />
+      <SunIcon className="dark:hidden h-6 w-6 fill-zinc-100 stroke-zinc-500 group-hover:fill-zinc-100 group-hover:stroke-blue-500" />
+      <MoonIcon className="dark:block hidden h-6 w-6 dark:group-hover:stroke-zinc-400 dark:fill-blue-400/10 dark:stroke-blue-500" />
     </button>
   );
 };
