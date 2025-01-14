@@ -30,11 +30,11 @@ export default function RootLayout({
       lang="en"
       className={`antialiased ${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="bg-zinc-50 dark:bg-black sm:px-8">
-        <div className="mx-auto w-full max-w-7xl lg:px-8 bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20">
-          <div className="relative px-4 sm:px-8 lg:px-12 pb-8">
+      <body className="bg-zinc-50 dark:bg-black">
+        <div className="min-h-screen flex flex-col items-center sm:px-8">
+          <div className="px-4 sm:px-8 lg:px-20 pb-8 w-full max-w-7xl bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20">
             <Header />
-            {children}
+            <main className="flex-grow">{children}</main>
             <Footer />
           </div>
         </div>

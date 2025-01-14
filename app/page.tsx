@@ -8,22 +8,20 @@ import { ContactSection } from "./components/ContactSection";
 
 export default function Home() {
   return (
-    <main className="min-h-full mt-10 sm:mt-16 lg:mt-20">
-      <div className="flex flex-col">
-        <ProfileHeroSection />
-        <Separator className="my-6 md:my-12 h-0" />
-        <div className="flex text-sm gap-4 flex-wrap lg:flex-nowrap">
-          <WorkSection />
-          <div className="flex flex-col gap-4 flex-1">
-            <SkillsSection />
-            <PostsSection />
-          </div>
+    <div className="flex flex-col mt-10 sm:mt-16 lg:mt-20">
+      <ProfileHeroSection />
+      <Separator className="my-6 md:my-12 h-0" />
+      <div className="flex text-sm gap-4 flex-wrap lg:flex-nowrap">
+        <WorkSection />
+        <div className="flex flex-col gap-4 flex-1">
+          <SkillsSection />
+          <PostsSection />
         </div>
-        <Separator className="my-10 h-0" />
-        <ProjectsSection />
-        <Separator className="my-10 h-0" />
-        <ContactSection />
       </div>
-    </main>
+      <Separator className="my-10 h-0" />
+      <ProjectsSection />
+      <Separator className="my-10 h-0" />
+      <ContactSection />
+    </div>
   );
 }
