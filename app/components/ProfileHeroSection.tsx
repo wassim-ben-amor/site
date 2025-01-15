@@ -10,15 +10,15 @@ import { ReferenceLink } from "@/components/ReferenceLink";
 import { buttonVariants } from "@/components/ui/button";
 
 export const ProfileHeroSection = () => (
-  <div className="flex flex-col-reverse md:flex-row transition items-center md:items-start">
-    <div className="flex flex-col md:w-2/3 sm:mr-8">
+  <div className="flex flex-col-reverse lg:flex-row transition items-center lg:items-center">
+    <div className="flex flex-col lg:w-2/3 lg:mr-16">
       <h1 className="text-2xl font-extrabold tracking-tight text-primary/90 sm:text-4xl">
         <span className="text-blue-500">Hello, I'm </span>Wassim 👋
       </h1>
       <h2 className="text-xl font-bold tracking-tight text-primary/75 sm:text-xl font-mono mt-1">
         Senior Fullstack Web Developer
       </h2>
-      <p className="mt-4 text-lg text-primary/75">
+      <p className="mt-4 text-lg text-primary/75 text-justify">
         I am a Senior Software Engineer at
         <ReferenceLink href="https://contentsquare.com/">
           <ContentsquareLogo className="size-4 text-white rounded-[4px]" />
@@ -57,7 +57,7 @@ export const ProfileHeroSection = () => (
         </Link>
       </div>
     </div>
-    <div className="flex items-center justify-center md:w-1/3 mb-8 md:mb-0">
+    <div className="flex items-center justify-center lg:w-1/3 mb-8">
       <div className="rounded-full shadow-custom">
         <img
           className="w-full rounded-full object-cover max-w-[18rem]"

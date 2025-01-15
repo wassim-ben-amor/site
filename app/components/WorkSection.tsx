@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/card";
 
 const WorkExperienceItem = (
-  props: PropsWithChildren<{ title: string; description: string; date: string }>
+  props: PropsWithChildren<{ company: string; title: string; date: string }>
 ) => (
   <li className="flex justify-between">
     <div className="flex flex-1 gap-3">
@@ -24,15 +24,13 @@ const WorkExperienceItem = (
         {props.children}
       </span>
       <div className="flex flex-col gap-0.5">
-        <span className="font-medium text-primary/80">{props.title}</span>
+        <span className="font-medium text-primary/80">{props.company}</span>
         <span className="font-light text-xs text-primary/80">
-          {props.description}
+          {props.title}
         </span>
       </div>
     </div>
-    <span className="font-light text-xs text-primary/75">
-      {props.date}
-    </span>
+    <span className="font-normal text-xs text-primary/75">{props.date}</span>
   </li>
 );
 
@@ -47,22 +45,22 @@ export const WorkSection = () => (
     <CardContent>
       <ol className="flex flex-col gap-6">
         <WorkExperienceItem
+          company="Contentsquare"
           title="Senior Software Engineer"
-          description="Contentsquare"
           date="Mar. 2020 — Present"
         >
           <ContentsquareLogo className="text-white h-full w-full rounded-full" />
         </WorkExperienceItem>
         <WorkExperienceItem
+          company="Askhub"
           title="Software Engineer"
-          description="Askhub"
           date="Feb. 2018 — Feb. 2020"
         >
           <AskhubLogo className="h-full w-full dark:bg-white rounded-full" />
         </WorkExperienceItem>
         <WorkExperienceItem
+          company="Vynd"
           title="Frontend Developer"
-          description="Vynd"
           date="Mar. 2016 — Jan. 2018"
         >
           <VyndLogo className="p-0.5 h-full w-full dark:bg-white rounded-full" />
