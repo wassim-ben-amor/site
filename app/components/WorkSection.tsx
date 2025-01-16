@@ -19,18 +19,18 @@ const WorkExperienceItem = (
   props: PropsWithChildren<{ company: string; title: string; date: string }>
 ) => (
   <li className="flex justify-between">
-    <div className="flex flex-1 gap-3">
+    <div className="flex flex-1 gap-3 items-center">
       <span className="rounded-full flex items-center justify-center h-10 w-10 p-0.5 shadow-custom">
         {props.children}
       </span>
       <div className="flex flex-col gap-0.5">
         <span className="font-medium text-primary/80">{props.company}</span>
-        <span className="font-light text-xs text-primary/80">
+        <span className="text-sm text-primary/80">
           {props.title}
         </span>
       </div>
     </div>
-    <span className="font-normal text-xs text-primary/75">{props.date}</span>
+    <span className="font-normal text-sm text-primary/70">{props.date}</span>
   </li>
 );
 

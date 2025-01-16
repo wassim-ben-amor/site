@@ -15,7 +15,12 @@ const ProjectItem = (
     link: string;
   }>
 ) => (
-  <Link href={props.link} className="w-full md:w-1/3 group" target="_blank">
+  <Link
+    href={props.link}
+    className="w-full md:w-1/3 group"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <div className="flex flex-col">
       <div className="relative overflow-hidden rounded-xl w-full ring-1 ring-zinc-900/10 dark:ring-white/10 shrink-0">
         <img
@@ -57,9 +62,9 @@ export const ProjectsSection = () => (
         title="My portfolio"
         stack="Next.js • Tailwind CSS • TypeScript"
         type="open-source"
-        description="My portfolio website to showcase my skills and projects built with Next.js."
+        description="My portfolio website built with Next.js and Tailwind CSS to showcase my skills, projects, and work experiences."
         image="/portfolio-project.png"
-        link="https://nextjs.org/"
+        link="#"
       />
     </div>
   </div>

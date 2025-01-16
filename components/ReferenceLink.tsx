@@ -1,17 +1,26 @@
 import { cn } from "@/lib/utils";
 import { PropsWithChildren } from "react";
+import { buttonVariants } from "./ui/button";
+import Link from "next/link";
 
-export const ReferenceLink = (
-  props: PropsWithChildren<{ href: string; className?: string }>
-) => (
-  <a
-    href={props.href}
-    target="_blank"
-    className={cn(
-      "font-medium ml-1 mr-1 inline-flex gap-1 items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100",
-      props.className
-    )}
-  >
-    {props.children}
-  </a>
+export const ReferenceLink = ({
+  href,
+  className,
+  children,
+}: PropsWithChildren<{ href: string; className?: string }>) => (
+  <>
+    {" "}
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cn(
+        buttonVariants({ variant: "outline" }),
+        "px-2 h-7 rounded-sm shadow-none bg-neutral-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:border-neutral-700 text-primary font-medium",
+        className
+      )}
+    >
+      {children}
+    </Link>{" "}
+  </>
 );

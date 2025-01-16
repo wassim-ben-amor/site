@@ -18,6 +18,7 @@ export const PostsSection = () => (
           <Link
             href="https://engineering.contentsquare.com/2021/serverside-webpage-screenshot/"
             target="_blank"
+            rel="noopener noreferrer"
             className="flex flex-1 gap-2"
           >
             <Image

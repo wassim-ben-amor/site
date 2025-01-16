@@ -43,6 +43,7 @@ const Socials = () => (
       className="size-5 text-primary/60 transition hover:text-[#0A66C2]"
       href="https://www.linkedin.com/in/wassim-ben-amor/"
       target="_blank"
+      rel="noopener noreferrer"
     >
       <LinkedinIcon />
     </Link>
@@ -50,6 +51,7 @@ const Socials = () => (
       className="size-5 text-primary/60 transition hover:text-black dark:hover:text-[#fafafa]"
       href="https://github.com/wassim-ben-amor"
       target="_blank"
+      rel="noopener noreferrer"
     >
       <GithubIcon />
     </Link>

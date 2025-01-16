@@ -15,7 +15,12 @@ const ContactItem = (
     href: string;
   }>
 ) => (
-  <Link href={props.href} className="flex-1 min-w-72 group" target="_blank">
+  <Link
+    href={props.href}
+    className="flex-1 min-w-72 group"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <Card className="shadow-sm p-4 relative rounded-lg">
       <div className="flex items-center gap-4">
         <div className="relative">

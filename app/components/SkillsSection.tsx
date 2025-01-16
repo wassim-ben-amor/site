@@ -42,10 +42,10 @@ export const SkillsSection = () => (
     </CardHeader>
     <CardContent className="flex gap-6 flex-wrap">
       <SkillItem title="Javascript">
-        <JavascriptIcon className="size-6 rounded-[4px] text-zinc-200 dark:text-zinc-400 hover:text-[#F7DF1E] transition-transform hover:scale-125" />
+        <JavascriptIcon className="size-6 rounded-[4px] text-zinc-200 dark:text-zinc-400 hover:text-[#F7DF1E] dark:hover:text-[#F7DF1E] transition-transform hover:scale-125" />
       </SkillItem>
       <SkillItem title="Typescript">
-        <TypescriptIcon className="size-6 rounded-[4px] text-zinc-300 dark:text-zinc-500 hover:text-[#3178C6] transition-transform hover:scale-125" />
+        <TypescriptIcon className="size-6 rounded-[4px] text-zinc-300 dark:text-zinc-500 hover:text-[#3178C6] dark:hover:text-[#3178C6] transition-transform hover:scale-125" />
       </SkillItem>
       <SkillItem title="Node.js">
         <NodeIcon className="size-6 text-zinc-400 hover:text-[#539E43] transition-transform hover:scale-125" />
@@ -60,7 +60,7 @@ export const SkillsSection = () => (
         <ReduxIcon className="size-6 text-zinc-400 hover:text-[#764ABC] transition-transform hover:scale-125" />
       </SkillItem>
       <SkillItem title="Next.js">
-        <NextIcon className="size-6 text-zinc-400 hover:text-black transition-transform hover:scale-125" />
+        <NextIcon className="size-6 text-zinc-400 hover:text-black dark:hover:text-white transition-transform hover:scale-125" />
       </SkillItem>
       <SkillItem title="Angular">
         <div className="group">
@@ -68,7 +68,7 @@ export const SkillsSection = () => (
         </div>
       </SkillItem>
       <SkillItem title="PostgreSQL">
-        <PostgresqlIcon className="size-6 text-zinc-300 dark:text-zinc-500 hover:text-[#336791] transition-transform hover:scale-125" />
+        <PostgresqlIcon className="size-6 text-zinc-300 dark:text-zinc-500 hover:text-[#336791] dark:hover:text-[#336791] transition-transform hover:scale-125" />
       </SkillItem>
       <SkillItem title="Github Actions">
         <GithubActionsIcon className="size-6 text-zinc-400 hover:text-[#4A7EBF] transition-transform hover:scale-125" />
