@@ -20,7 +20,7 @@ const WorkExperienceItem = (
 ) => (
   <li className="flex justify-between">
     <div className="flex flex-1 gap-3 items-center">
-      <span className="rounded-full flex items-center justify-center h-10 w-10 p-0.5 shadow-custom">
+      <span className="rounded-full flex items-center justify-center min-h-10 min-w-10 h-10 w-10 p-0.5 shadow-custom">
         {props.children}
       </span>
       <div className="flex flex-col gap-0.5">
@@ -30,7 +30,7 @@ const WorkExperienceItem = (
         </span>
       </div>
     </div>
-    <span className="font-normal text-sm text-primary/70">{props.date}</span>
+    <span className="font-normal text-sm text-right text-primary/70">{props.date}</span>
   </li>
 );
 
