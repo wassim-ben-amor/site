@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -17,10 +17,43 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Wassim Ben Amor - Senior Software Engineer";
+const description =
+  "Experienced Senior Software Engineer passionate about the JavaScript ecosystem. Proficient in React, Next.js, Angular, and Node.js frameworks like NestJS. I build scalable, efficient, and maintainable web applications.";
+const imageUrl = "/protfolio-project.jpg";
+
 export const metadata: Metadata = {
-  title: "Wassim Ben Amor - Senior Software Engineer",
-  description:
-    "Experienced Senior Software Engineer passionate about the JavaScript ecosystem. Proficient in React, Next.js, Angular, and Node.js frameworks like NestJS. I build scalable, efficient, and maintainable web applications.",
+  title,
+  description,
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    site: "@wassim_benamor",
+    creator: "@wassim_benamor",
+    images: imageUrl,
+  },
+  openGraph: {
+    type: "website",
+    title,
+    description,
+    siteName: "Wassim Ben Amor",
+    images: [{ url: imageUrl, alt: title }],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({

@@ -22,9 +22,9 @@ export const ProfileHeroSection = () => (
         Senior Fullstack Web Developer
       </h2>
       <p className="mt-4 text-lg text-primary/75 text-justify">
-        I&apos;m a Senior Software Engineer based in Paris 🇫🇷, driven by my passion
-        for the JavaScript ecosystem. I focus on delivering modern, scalable,
-        and robust web applications.
+        I&apos;m a Senior Software Engineer based in Paris 🇫🇷, driven by my
+        passion for the JavaScript ecosystem. I focus on delivering modern,
+        scalable, and robust web applications.
       </p>
       <p className="mt-4 text-lg text-primary/75 text-justify">
         With over 8 years of experience in fullstack development, I specialize
@@ -63,11 +63,16 @@ export const ProfileHeroSection = () => (
       <p className="mt-4 text-lg text-primary/75 text-justify">
         Beyond coding, I love exploring innovative ways to enhance developer
         experience and streamline workflows. Whether it&apos;s architecting
-        micro-frontends, optimizing CI/CD pipelines, or mentoring others, I&apos;m
-        always excited to tackle challenging projects.
+        micro-frontends, optimizing CI/CD pipelines, or mentoring others,
+        I&apos;m always excited to tackle challenging projects.
       </p>
       <div className="mt-8 text-lg flex gap-4">
-        <Link className={buttonVariants({ variant: "outline" })} href="#">
+        <Link
+          className={buttonVariants({ variant: "outline" })}
+          target="_blank"
+          rel="noopener noreferrer"
+          href="/CV_Wassim_Ben_Amor_EN.pdf"
+        >
           <DownloadIcon className="text-blue-500" />
           Download my resume
         </Link>
