@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { PropsWithChildren } from "react";
 import { GithubIcon } from "./icons/GithubIcon";
@@ -37,8 +38,10 @@ const DesktopNav = () => (
 const Avatar = () => (
   <div className="size-11 rounded-full p-0.5 shadow-custom hidden sm:block">
     <Link href="/" aria-label="Home">
-      <img
-        className="size-10 rounded-full object-cover"
+      <Image
+        width={40}
+        height={40}
+        className="rounded-full object-cover"
         src="/avatar.jpg"
         alt="Profile Image"
       />

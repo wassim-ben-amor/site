@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
+import Image from "next/image";
 
 import { ClickArrowIcon } from "@/components/icons/ClickArrowIcon";
 import { DotIcon } from "@/components/icons/DotIcon";
@@ -23,7 +24,9 @@ const ProjectItem = (
   >
     <div className="flex flex-col">
       <div className="relative overflow-hidden rounded-xl w-full ring-1 ring-zinc-900/10 dark:ring-white/10 shrink-0">
-        <img
+        <Image
+          width={400}
+          height={410}
           src={props.image}
           alt={props.title}
           className="aspect-[16/9] w-full transition duration-300 ease-in-out group-hover:scale-110 object-cover shadow-sm sm:aspect-[2/1] lg:aspect-[3/2]"

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PropsWithChildren } from "react";
+import Image from "next/image";
 
 import { ClickArrowIcon } from "@/components/icons/ClickArrowIcon";
 import { GithubIcon } from "@/components/icons/GithubIcon";
@@ -24,10 +25,12 @@ const ContactItem = (
     <Card className="shadow-sm p-4 relative rounded-lg">
       <div className="flex items-center gap-4">
         <div className="relative">
-          <img
+          <Image
+            width={40}
+            height={40}
             src={props.image}
             alt={props.name}
-            className="rounded-full object-cover w-10 h-10"
+            className="rounded-full object-cover"
           />
           <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-[3px] border-white bg-white">
             {props.children}
