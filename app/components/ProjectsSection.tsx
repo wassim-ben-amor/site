@@ -66,8 +66,8 @@ export const ProjectsSection = () => (
         stack="Next.js • Tailwind CSS • TypeScript"
         type="open-source"
         description="My portfolio website built with Next.js and Tailwind CSS to showcase my skills, projects, and work experiences."
-        image="/portfolio-project.png"
-        link="#"
+        image="/portfolio-project.jpg"
+        link="https://github.com/wassim-ben-amor/site"
       />
     </div>
   </div>

@@ -53,7 +53,7 @@ export const WorkSection = () => (
         </WorkExperienceItem>
         <WorkExperienceItem
           company="Askhub"
-          title="Software Engineer"
+          title="Technical Lead"
           date="Feb. 2018 — Feb. 2020"
         >
           <AskhubLogo className="h-full w-full dark:bg-white rounded-full" />
