@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title,
     description,
     siteName: "Wassim Ben Amor",
-    images: [{ url: imageUrl, secureUrl: imageUrl, alt: title }],
+    images: [{ url: imageUrl, secureUrl: imageUrl, alt: title, type: "image/jpeg", width: 540, height: 282 }],
   },
   robots: {
     index: true,
