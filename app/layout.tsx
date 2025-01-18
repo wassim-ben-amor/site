@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 const title = "Wassim Ben Amor - Senior Software Engineer";
 const description =
   "Experienced Senior Software Engineer passionate about the JavaScript ecosystem. Proficient in React, Next.js, Angular, and Node.js frameworks like NestJS. I build scalable, efficient, and maintainable web applications.";
-const imageUrl = "/protfolio-project.jpg";
+const imageUrl = "/portfolio-project.jpg";
 
 export const metadata: Metadata = {
   title,
