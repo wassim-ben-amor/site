@@ -1,7 +1,14 @@
 import { AskhubLogo } from "@/components/icons/AskhubLogo";
 import { ContentsquareLogo } from "@/components/icons/ContentsquareLogo";
 import { VyndLogo } from "@/components/icons/VyndLogo";
+import { Metadata } from "next";
 import { JSX } from "react";
+
+export const metadata: Metadata = {
+  title: "Wassim Ben Amor - Work Experiences",
+  description:
+    "An overview of my professional experiences, highlighting key roles, achievements, and the technologies I have worked with.",
+};
 
 type Experience = {
   role: string;
@@ -106,8 +113,12 @@ const logoMap: Record<string, JSX.Element> = {
   Contentsquare: (
     <ContentsquareLogo className="h-7 w-7 rounded-full shadow-custom" />
   ),
-  Askhub: <AskhubLogo className="h-7 w-7 rounded-full shadow-custom" />,
-  Vynd: <VyndLogo className="h-7 w-7 rounded-full shadow-custom" />,
+  Askhub: (
+    <AskhubLogo className="h-7 w-7 rounded-full dark:bg-white shadow-custom" />
+  ),
+  Vynd: (
+    <VyndLogo className="h-7 w-7 rounded-full dark:bg-white shadow-custom" />
+  ),
 };
 
 const workExperienceItem = (experience: Experience) => (
@@ -153,8 +164,8 @@ export default function WorkPage() {
     <div className="flex flex-col mt-10 sm:mt-16 lg:mt-20 px-4 sm:px-8 lg:px-12">
       <h1 className="text-3xl font-bold mb-4">Work Experiences</h1>
       <p className="text-zinc-600 dark:text-zinc-300 mb-8">
-        Below is an overview of my professional experience, highlighting key
-        roles, achievements, and the technologies I've worked with.
+        Below is an overview of my professional experiences, highlighting key
+        roles, achievements, and the technologies I have worked with.
       </p>
       <div className="flex flex-col gap-16 md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
         {experiences.map(workExperienceItem)}

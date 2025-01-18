@@ -9,7 +9,7 @@ export const Footer = () => {
         © Wassim Ben Amor 2025. All rights reserved.
       </div>
       <div className="mt-2 flex gap-4 font-light text-base">
-        <Link href="/home">Home</Link>
+        <Link href="/">Home</Link>
         <Link href="/work">Work</Link>
       </div>
     </footer>

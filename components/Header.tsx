@@ -1,23 +1,32 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { PropsWithChildren, useState } from "react";
-import { SunIcon } from "./icons/SunIcon";
-import { MoonIcon } from "./icons/MoonIcon";
-import { LinkedinIcon } from "./icons/LinkedinIcon";
+import { usePathname } from "next/navigation";
+import { PropsWithChildren } from "react";
 import { GithubIcon } from "./icons/GithubIcon";
+import { LinkedinIcon } from "./icons/LinkedinIcon";
 import { MailIcon } from "./icons/MailIcon";
+import { MoonIcon } from "./icons/MoonIcon";
+import { SunIcon } from "./icons/SunIcon";
 
-const DesktopNavItem = (props: PropsWithChildren<{ href: string }>) => (
-  <li>
-    <Link
-      href={props.href}
-      className="relative block px-3 py-2.5 transition active:text-blue-500 dark:active:text-blue-400 hover:text-blue-500 dark:hover:text-blue-400 dark:text-white"
-    >
-      {props.children}
-    </Link>
-  </li>
-);
+const DesktopNavItem = (props: PropsWithChildren<{ href: string }>) => {
+  const pathname = usePathname();
+  return (
+    <li>
+      <Link
+        href={props.href}
+        className={cn(
+          pathname === props.href ? "text-blue-500 dark:text-blue-400" : "",
+          "relative block px-3 py-2.5 transition hover:text-blue-500 dark:hover:text-blue-400"
+        )}  
+      >
+        {props.children}
+      </Link>
+    </li>
+  );
+};
+
 const DesktopNav = () => (
   <ul className="flex items-center rounded-full px-4 text-sm font-medium shadow-custom">
     <DesktopNavItem href="/">Home</DesktopNavItem>

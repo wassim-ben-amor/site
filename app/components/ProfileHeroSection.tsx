@@ -57,7 +57,7 @@ export const ProfileHeroSection = () => (
           <NestIcon className="size-4 text-[#E0234E]" />
           NestJs
         </ReferenceLink>
-        to build reliable and scalable solutions.
+        .
       </p>
       <p className="mt-4 text-lg text-primary/75 text-justify">
         Beyond coding, I love exploring innovative ways to enhance developer
