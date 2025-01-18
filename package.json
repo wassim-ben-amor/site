@@ -1,6 +1,7 @@
 {
   "name": "site",
-  "version": "0.1.0",
+  "author": "Wassim Ben Amor <wassim.benamor1@gmail.com>",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
