@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">
+  <a href="https://wassimbenamor.com">wassimbenamor.com</a>
+</h1>
+<p align="center">
+  Source of my website <a href="https://wassimbenamor.com" target="_blank">wassimbenamor.com</a> built with <a href="https://nextjs.org/" target="_blank">Next</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
+</p>
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/wassimbenamor)
+[![last commit](https://badgen.net/github/last-commit/wassim-ben-amor/site?icon=https://simpleicons.now.sh/git/fff)](https://github.com/wassim-ben-amor/site)
+[![pnpm version](https://img.shields.io/badge/v10.0.0-F69220.svg?logo=pnpm&logoColor=white&label=pnpm)](https://pnpm.io/)
+[![node version](https://img.shields.io/badge/%3E=20.0.0-3C873A.svg?logo=node.js&logoColor=white&label=node)](https://nodejs.org/en/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<div align="center">
+<a href="https://wassimbenamor.com/" target="_blank"><img alt="home page" src="public/portfolio-project.jpg" width="500px" /></a>
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 👋 About this repo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This is my portfolio website built with Next.js and Tailwind CSS to showcase my skills, projects, and work experiences.
 
-## Learn More
+## 👨‍💻 Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Here is how to setup the project locally to contribute:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
+   ```bash
+   $ git clone git@github.com:wassim-ben-amor/site.git
+   ```
+2. Install the dependencies using `pnpm` as follows:
+   ```bash
+   $ pnpm install
+   ```
+4. Run the application locally:
+   ```bash
+   $ pnpm dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📦 Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To deploy a new version, simply open a pull request against the `main` branch.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+When this pull request will be merged, a new version will be deployed in production automatically.
+
+---
+
+## 📣 Author Info
+
+- Linkedin - [@wassim-ben-amor](https://www.linkedin.com/in/wassim-ben-amor/)
+- Website - [Wassim Ben Amor](https://wassimbenamor.com/)
