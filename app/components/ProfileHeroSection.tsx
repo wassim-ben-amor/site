@@ -72,6 +72,7 @@ export const ProfileHeroSection = () => (
           target="_blank"
           rel="noopener noreferrer"
           href="/CV_Wassim_Ben_Amor_EN.pdf"
+          prefetch={false}
         >
           <DownloadIcon className="text-blue-500" />
           Download my resume
