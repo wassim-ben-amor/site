@@ -16,7 +16,6 @@ type Experience = {
   location: string;
   period: string;
   details: {
-    title: string;
     description: string;
     technologies: string[];
   }[];
@@ -24,33 +23,36 @@ type Experience = {
 
 const experiences: Experience[] = [
   {
-    role: "Senior Software Engineer",
+    role: "Senior Fullstack Engineer",
     company: "Contentsquare",
     location: "Paris, France",
-    period: "02/2020 - Present",
+    period: "03/2020 - Present",
     details: [
       {
-        title: "Zoning Team:",
-        description:
-          "Developed and enhanced the Zoning feature, a central product component enabling clients to view analytics on visual snapshots of their websites. Employed DOM serialization to capture site structure, allowing websites to be re-displayed in iframes for analysis. Addressed challenges in maintaining visual consistency within these snapshots, providing clients with valuable insights into user interactions on specific site elements.",
+        description: "Designed and optimized a micro-frontend architecture, leveraging Importmap for module federation to efficiently manage shared libraries across micro-frontends.",
+        technologies: ["React", "Redux", "Angular", "Vue.js", "Svelte", "Importmap", "Vite", "Webpack", "Vitest", "Jest"],
+      },
+      {
+        description: "Contributed to the Design System, delivering reusable and accessible UI components with design tokens to ensure consistency across applications.",
+        technologies: ["React", "Storybook", "Stencil", "Web Components"],
+      },
+      {
+        description: "Developed advanced DevX CLIs, optimizing monorepo management and automating GitHub Actions workflows for seamless CI/CD.",
+        technologies: ["GitHub Actions", "Turborepo"],
+      },
+      {
+        description: "Integrated performance monitoring and optimized data fetching, improving Largest Contentful Paint (LCP) and reducing redundant requests.",
+        technologies: ["Datadog", "Vite", "TanStack Query"],
+      },
+      {
+        description: "Built and enhanced the Zoning feature, enabling clients to analyze website snapshots with interactive analytics, ensuring accurate heatmap overlays, user interaction tracking, and form analysis.",
         technologies: [
           "Angular",
           "NgRx",
+          "RxJS",
           "NestJS (microservices architecture)",
           "PostgreSQL",
         ],
-      },
-      {
-        title: "Core Team:",
-        description:
-          "Transitioned to the Core team to lead key projects aimed at enhancing frontend architecture. Designed and implemented a micro-frontend system with a Svelte container to support MFEs built in Angular, React, and Vue.js, following web component standards. Directed major migrations from Vue 2 to Vue 3 and Angular 9 to 16, significantly improving performance, maintainability, and code consistency.",
-        technologies: ["Svelte", "Angular", "React", "Vue.js"],
-      },
-      {
-        title: "Tooling and Developer Experience:",
-        description:
-          "Delivered extensive tooling support across teams, enhancing monorepo management with Turborepo and pnpm. These improvements streamlined workflows and significantly boosted developer productivity and efficiency throughout the organization.",
-        technologies: ["Turborepo", "pnpm", "GitHub Actions"],
       },
     ],
   },
@@ -58,12 +60,10 @@ const experiences: Experience[] = [
     role: "Technical Lead",
     company: "Askhub",
     location: "Paris, France",
-    period: "02/2018 - 01/2020",
+    period: "02/2018 - 02/2020",
     details: [
       {
-        title: "Built a full-stack analytics platform",
-        description:
-          "with a serverless architecture on AWS and a responsive React frontend, enabling clients to track chatbot usage through detailed analytics.",
+        description: "Developed a full-stack analytics platform, combining a serverless AWS backend and a React frontend, enabling clients to track chatbot usage with detailed analytics.",
         technologies: [
           "React",
           "Redux",
@@ -74,35 +74,31 @@ const experiences: Experience[] = [
         ],
       },
       {
-        title: "Enhanced user experience",
-        description:
-          "with clear, intuitive UI/UX, providing clients with easy-to-navigate dashboards and insightful charts to monitor chatbot performance",
-        technologies: [],
+        description: "Integrated and optimized data visualizations, including interactive charts and analytical tables with advanced filtering capabilities to track chatbot intents and performance.",
+        technologies: ["React", "Redux", "Chart.js"],
       },
       {
-        title: "Led development and team collaboration",
-        description:
-          "guiding technical decisions and sharing best practices to ensure quality and efficiency across the project.",
+        description: "Led development, driving technical decisions, team collaboration, and bringing best practices to improve efficiency and code quality.",
         technologies: [],
-      },
+      }
     ],
   },
   {
-    role: "Frontend Engineer",
+    role: "Frontend Developer",
     company: "Vynd",
     location: "Tunis, Tunisia",
     period: "03/2016 - 01/2018",
     details: [
       {
-        title: "Developed UI mockups",
-        description:
-          "in Angular2, turning design concepts into interactive, visually engaging web pages for a venue-search platform.",
-        technologies: ["Angular 2"],
+        description: "Designed and developed a frontend web application for a venue-search platform using Angular 2, transforming UI mockups into a fully functional and responsive product.",
+        technologies: ["Angular 2/4"],
       },
       {
-        title: "Applied web design skills",
-        description:
-          "to create and improve mockups, ensuring a smooth and user-friendly experience for people searching venues.",
+        description: "Built and optimized search and filtering functionalities, ensuring a seamless user experience.",
+        technologies: [],
+      },
+      {
+        description: "Collaborated closely with the Design team to refine UI/UX, ensuring consistency and a smooth user journey.",
         technologies: [],
       },
     ],
@@ -144,11 +140,10 @@ const workExperienceItem = (experience: Experience) => (
 
       <ul className="mt-4 space-y-4 pl-4 border-l-2 border-zinc-100 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300">
         {experience.details.map((detail, idx) => (
-          <li key={idx} className="pl-2">
-            <strong>{detail.title}</strong> {detail.description}
-            <br />
+          <li key={idx} className="pl-2 leading-relaxed">
+            • {detail.description}
             {detail.technologies.length > 0 && (
-              <span className="text-sm italic">
+              <span className="block text-sm italic text-primary/70 mt-1">
                 Technologies: {detail.technologies.join(", ")}
               </span>
             )}
