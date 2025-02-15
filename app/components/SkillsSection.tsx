@@ -33,7 +33,7 @@ const SkillItem = (props: PropsWithChildren<{ title: string }>) => (
 );
 
 export const SkillsSection = () => (
-  <Card className="shadow-sm flex-1">
+  <Card className="shadow-xs flex-1">
     <CardHeader>
       <CardTitle className="flex items-center gap-2 text-primary/80">
         <SkillIcon className="size-5 text-blue-500" />

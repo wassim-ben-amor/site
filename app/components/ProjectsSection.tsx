@@ -29,7 +29,7 @@ const ProjectItem = (
           height={410}
           src={props.image}
           alt={props.title}
-          className="aspect-[16/9] w-full transition duration-300 ease-in-out group-hover:scale-110 object-cover shadow-sm sm:aspect-[2/1] lg:aspect-[3/2]"
+          className="aspect-16/9 w-full transition duration-300 ease-in-out group-hover:scale-110 object-cover shadow-xs sm:aspect-2/1 lg:aspect-3/2"
         />
         <ClickArrowIcon />
       </div>

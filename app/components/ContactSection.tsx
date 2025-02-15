@@ -22,7 +22,7 @@ const ContactItem = (
     target="_blank"
     rel="noopener noreferrer"
   >
-    <Card className="shadow-sm p-4 relative rounded-lg">
+    <Card className="shadow-xs p-4 relative rounded-lg">
       <div className="flex items-center gap-4">
         <div className="relative">
           <Image
@@ -32,7 +32,7 @@ const ContactItem = (
             alt={props.name}
             className="rounded-full object-cover"
           />
-          <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-[3px] border-white bg-white">
+          <span className="absolute -bottom-1 -right-1 size-4 rounded-full border-[3px] border-white bg-white">
             {props.children}
           </span>
         </div>
