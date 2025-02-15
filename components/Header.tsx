@@ -95,11 +95,11 @@ const DarkModeToggle = () => {
     <button
       type="button"
       aria-label="Toggle dark mode"
-      className="group rounded-full px-3 py-2 shadow-custom"
+      className="group rounded-full px-3 py-2 shadow-custom cursor-pointer"
       onClick={toggleMode}
     >
-      <SunIcon className="dark:hidden h-6 w-6 fill-zinc-100 stroke-zinc-500 group-hover:fill-zinc-100 group-hover:stroke-blue-500" />
-      <MoonIcon className="dark:block hidden h-6 w-6 dark:group-hover:stroke-zinc-400 dark:fill-blue-400/10 dark:stroke-blue-500" />
+      <SunIcon className="dark:hidden size-6 fill-zinc-100 stroke-zinc-500 group-hover:fill-zinc-100 group-hover:stroke-blue-500" />
+      <MoonIcon className="dark:block hidden size-6 dark:group-hover:stroke-zinc-400 dark:fill-blue-400/10 dark:stroke-blue-500" />
     </button>
   );
 };

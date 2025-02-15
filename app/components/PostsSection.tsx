@@ -5,7 +5,7 @@ import { DocumentIcon } from "@/components/icons/DocumentIcon";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const PostsSection = () => (
-  <Card className="shadow-sm">
+  <Card className="shadow-xs">
     <CardHeader>
       <CardTitle className="flex items-center gap-2 text-primary/90">
         <DocumentIcon className="size-5 text-blue-500" />

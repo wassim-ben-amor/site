@@ -20,7 +20,7 @@ const WorkExperienceItem = (
 ) => (
   <li className="flex justify-between">
     <div className="flex flex-1 gap-3 items-center">
-      <span className="rounded-full flex items-center justify-center min-h-10 min-w-10 h-10 w-10 p-0.5 shadow-custom">
+      <span className="rounded-full flex items-center justify-center min-h-10 min-w-10 size-10 p-0.5 shadow-custom">
         {props.children}
       </span>
       <div className="flex flex-col gap-0.5">
@@ -35,7 +35,7 @@ const WorkExperienceItem = (
 );
 
 export const WorkSection = () => (
-  <Card className="w-full lg:w-[55%] shadow-sm">
+  <Card className="w-full lg:w-[55%] shadow-xs">
     <CardHeader>
       <CardTitle className="flex items-center gap-2 text-primary/80">
         <WorkIcon className="size-5 text-blue-500" />

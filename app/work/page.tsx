@@ -111,13 +111,13 @@ const experiences: Experience[] = [
 
 const logoMap: Record<string, JSX.Element> = {
   Contentsquare: (
-    <ContentsquareLogo className="h-7 w-7 rounded-full shadow-custom" />
+    <ContentsquareLogo className="size-7 rounded-full shadow-custom" />
   ),
   Askhub: (
-    <AskhubLogo className="h-7 w-7 rounded-full dark:bg-white shadow-custom" />
+    <AskhubLogo className="size-7 rounded-full dark:bg-white shadow-custom" />
   ),
   Vynd: (
-    <VyndLogo className="h-7 w-7 rounded-full dark:bg-white shadow-custom" />
+    <VyndLogo className="size-7 rounded-full dark:bg-white shadow-custom" />
   ),
 };
 
@@ -126,11 +126,11 @@ const workExperienceItem = (experience: Experience) => (
     key={experience.company}
     className="flex flex-col md:flex-row md:items-start gap-6"
   >
-    <div className="flex-shrink-0 md:w-1/4 text-sm text-primary/80">
+    <div className="shrink-0 md:w-1/4 text-sm text-primary/80">
       <p>{experience.period}</p>
     </div>
 
-    <div className="flex-grow space-y-2">
+    <div className="grow space-y-2">
       <div className="flex items-center space-x-2">
         {logoMap[experience.company]}
         <h2 className="text-lg font-semibold text-primary">
